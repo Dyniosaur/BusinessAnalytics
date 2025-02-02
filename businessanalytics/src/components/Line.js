@@ -1,5 +1,5 @@
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Title, Tooltip, Colors } from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Title, Tooltip, } from "chart.js";
 
 
 ChartJS.register(
@@ -9,7 +9,7 @@ ChartJS.register(
     LineElement,
     Legend,
     Title,
-    Tooltip
+    Tooltip,
 );
 
 
