@@ -1,20 +1,16 @@
-import { Line} from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Title, Tooltip, } from "chart.js";
+import { Pie } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Legend, Title, Tooltip, } from "chart.js";
 
 
 
 ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
+    ArcElement,
     Legend,
     Title,
     Tooltip,
 );
 
-
-const LineGraph = ({ data }) => {
+const PieGraph = ({ data }) => {
 
     const chartData = {
       labels: data.labels,
@@ -22,9 +18,9 @@ const LineGraph = ({ data }) => {
         {
           label: 'Sales Q1',
           data: data.values,
-          borderColor: '#007ea7',
           borderWidth: 3,
-          fill: false,
+          fill: true,
+          backgroundColor:['#007ea7','#76c893','#ffe45e','#dab6fc','#d8315b','#dae3e5'],
           tension: 0.4,
         },
       ],
@@ -59,9 +55,9 @@ const LineGraph = ({ data }) => {
     return (
       <div>
         <h2>Sales per sizes</h2>
-        <Line data={chartData} options={options} />
+        <Pie data={chartData} options={options} />
       </div>
     );
 };
 
-export default LineGraph;
+export default PieGraph;

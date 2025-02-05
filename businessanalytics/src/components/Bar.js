@@ -1,20 +1,18 @@
-import { Line} from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Title, Tooltip, } from "chart.js";
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Legend, Title, Tooltip, } from "chart.js";
 
 
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    PointElement,
-    LineElement,
+    BarElement,
     Legend,
     Title,
     Tooltip,
 );
 
-
-const LineGraph = ({ data }) => {
+const BarGraph = ({ data }) => {
 
     const chartData = {
       labels: data.labels,
@@ -24,7 +22,8 @@ const LineGraph = ({ data }) => {
           data: data.values,
           borderColor: '#007ea7',
           borderWidth: 3,
-          fill: false,
+          fill: true,
+          backgroundColor:'#007ea7',
           tension: 0.4,
         },
       ],
@@ -59,9 +58,9 @@ const LineGraph = ({ data }) => {
     return (
       <div>
         <h2>Sales per sizes</h2>
-        <Line data={chartData} options={options} />
+        <Bar data={chartData} options={options} />
       </div>
     );
 };
 
-export default LineGraph;
+export default BarGraph;
