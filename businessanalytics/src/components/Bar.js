@@ -23,7 +23,7 @@ const BarGraph = ({ data }) => {
           borderColor: '#007ea7',
           borderWidth: 3,
           fill: true,
-          backgroundColor:'#007ea7',
+          backgroundColor:['#007ea7','#76c893','#ffe45e','#dab6fc','#d8315b','#dae3e5'],
           tension: 0.4,
         },
       ],

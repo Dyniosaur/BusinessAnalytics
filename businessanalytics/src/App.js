@@ -13,23 +13,25 @@ function App() {
 
   return(
     <div>
-      <div style={{width: '1300px', height: '1300px', position:'absolute', left: '-700px', top: '-700px', backgroundColor: '#007ea7', borderRadius: "100%", opacity:'4%',}} className='blurOne'>
-      </div>
-      <div style={{width: '1300px', height: '1300px', position:'absolute', left: '-600px', top: '-600px', backgroundColor: '#7251EA', borderRadius: "100%", opacity:'1%', }} className='blurTwo'>
-      </div>
-      <div style={{width: '1300px', height: '1300px', position:'absolute', right: '-700px', bottom: '-700px', backgroundColor: '#007ea7', borderRadius: "100%", opacity:'4%', }} className='blurOne'>
-      </div>
-      <div style={{width: '1300px', height: '1300px', position:'absolute', right: '-600px', bottom: '-600px', backgroundColor: '#7251EA', borderRadius: "100%", opacity:'1%',}} className='blurTwo'>
+      <div className='déco'>
+        <div style={{width: '1300px', height: '1300px', position:'absolute', left: '-700px', top: '-700px', backgroundColor: '#007ea7', borderRadius: "100%", opacity:'4%',}} className='blurOne'>
+        </div>
+        <div style={{width: '1300px', height: '1300px', position:'absolute', left: '-600px', top: '-600px', backgroundColor: '#7251EA', borderRadius: "100%", opacity:'1%', }} className='blurTwo'>
+        </div>
+        <div style={{width: '1300px', height: '1300px', position:'absolute', right: '-700px', bottom: '-700px', backgroundColor: '#007ea7', borderRadius: "100%", opacity:'4%', }} className='blurOne'>
+        </div>
+        <div style={{width: '1300px', height: '1300px', position:'absolute', right: '-600px', bottom: '-600px', backgroundColor: '#7251EA', borderRadius: "100%", opacity:'1%',}} className='blurTwo'>
+        </div>
       </div>
 
 
       <Sidebar/>
 
       <div className="heroDashboard">
-        <div style={{ maxWidth: '90%', maxHeight: '200px', fontFamily:'Roboto', color:'white', backgroundColor:'rgba(0, 0, 0, 0.16)', borderRadius:'16px', alignSelf:'center', justifySelf:'center' }}>
+        <div style={{ Width: '450px', Height: 'auto', fontFamily:'Roboto', color:'white', backgroundColor:'rgba(0, 0, 0, 0.16)', borderRadius:'16px', alignSelf:'center', justifySelf:'flex-end', }}>
         <LineGraph data={data} />
         </div>
-        <div style={{ maxWidth: '90%', maxHeight: '200px', fontFamily:'Roboto', color:'white', backgroundColor:'rgba(0, 0, 0, 0.16)', borderRadius:'16px', alignSelf:'center', justifySelf:'center' }}>
+        <div style={{ Width: '250px', Height: 'auto', fontFamily:'Roboto', color:'white', backgroundColor:'rgba(0, 0, 0, 0.16)', borderRadius:'16px', alignSelf:'center', justifySelf:'flex-start',  }}>
         <PieGraph data={data} />
         </div>
       </div>
